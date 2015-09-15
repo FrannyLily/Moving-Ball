@@ -1,0 +1,24 @@
+//Ball going back an forth
+
+float ball=20;
+float speed=1.5;
+float dir=1;
+
+
+void setup(){
+  size (500,500);
+}
+
+void draw(){
+  
+  background(100);
+  noStroke();
+  fill(255,0,0,50);
+  
+  ball=ball+(speed*dir);
+  
+  ellipse(ball,250,40,40);
+  if(ball>480||ball< 20){
+    dir=dir*(-1);
+  }
+}
